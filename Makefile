@@ -12,10 +12,10 @@
 # --Mdir apunta fuera de esta carpeta, a $(BUILD_DIR).
 
 BUILD_DIR  := $(HOME)/verilator_builds
-LZ4_PREFIX := /opt/homebrew/opt/lz4
+LZ4_PREFIX := /usr
 
 VLFLAGS := --binary --timing -sv --trace-fst \
-           -Wno-IEEEMAYDEPRECATE -Wno-TIMESCALEMOD -Wno-WIDTHTRUNC -Wno-WIDTHEXPAND \
+           -Wno-TIMESCALEMOD -Wno-WIDTHTRUNC -Wno-WIDTHEXPAND \
            -Wno-CASEINCOMPLETE -Wno-LATCH -Wno-UNOPTFLAT \
            -CFLAGS "-I$(LZ4_PREFIX)/include" -LDFLAGS "-L$(LZ4_PREFIX)/lib -llz4"
 
